@@ -1,0 +1,558 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 32px 20px;
+  background: #112d26;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: #54ddb0;
+}
+
+.workspace {
+  margin: 10px 0 36px;
+  color: #a8c4ba;
+  font-size: 12px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #c6d9d1;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background: #1c4035;
+}
+
+.nav-item.active {
+  background: #54ddb0;
+  color: #112d26;
+  font-weight: 700;
+}
+
+.profile {
+  margin-top: auto;
+  padding-top: 32px;
+  color: #c6d9d1;
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #657a72;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.header h1 {
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.badge {
+  padding: 8px 12px;
+  border: 1px solid #d9e3df;
+  border-radius: 20px;
+  background: white;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.welcome {
+  margin-bottom: 28px;
+}
+
+.welcome h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.welcome p,
+.empty-state p {
+  color: #657a72;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.stat-card,
+.panel {
+  padding: 24px;
+  background: white;
+  border: 1px solid #e2e9e5;
+  border-radius: 16px;
+}
+
+.stat-card p {
+  color: #657a72;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 30px;
+}
+
+.stat-card > span {
+  color: #657a72;
+  font-size: 12px;
+}
+
+.panel h2 {
+  font-size: 18px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 18px 12px;
+  border-bottom: 1px solid #edf1ef;
+  font-size: 14px;
+}
+
+th {
+  color: #657a72;
+  font-size: 12px;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e4f8ee;
+  color: #176344;
+  font-size: 12px;
+}
+
+.status.draft {
+  background: #fff3d9;
+  color: #805b14;
+}
+
+.primary-button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #112d26;
+  color: white;
+}
+
+@media (max-width: 1100px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .workspace {
+    margin-bottom: 20px;
+  }
+
+  .sidebar nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile {
+    display: none;
+  }
+
+  .content {
+    padding: 24px 16px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .stats {
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+}
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.contact-form label,
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-form label {
+  flex: 1 1 200px;
+}
+
+.contact-form input,
+.search-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd8d1;
+  border-radius: 10px;
+  background: white;
+  color: #172b25;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.search-field input:focus {
+  outline: 2px solid #16845e;
+  outline-offset: 2px;
+}
+
+.search-field {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.form-error {
+  color: #b42318;
+}
+
+.delete-button {
+  padding: 8px 12px;
+  border: 1px solid #f1c3bf;
+  border-radius: 8px;
+  background: #fff2f0;
+  color: #b42318;
+}
+
+.delete-button:hover {
+  background: #ffe0dc;
+}
+.automation-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.automation-layout .panel > p {
+  color: #657a72;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.automation-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.automation-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.automation-form input,
+.automation-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd8d1;
+  border-radius: 10px;
+  background: white;
+  color: #172b25;
+  font: inherit;
+}
+
+.automation-form textarea {
+  resize: vertical;
+}
+
+.automation-form input:focus,
+.automation-form textarea:focus {
+  outline: 2px solid #16845e;
+  outline-offset: 2px;
+}
+
+.rule-list {
+  display: grid;
+  gap: 14px;
+}
+
+.rule-card {
+  padding: 16px;
+  border: 1px solid #e2e9e5;
+  border-radius: 12px;
+}
+
+.rule-heading,
+.rule-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.rule-heading {
+  justify-content: space-between;
+}
+
+.rule-heading strong,
+.rule-reply {
+  overflow-wrap: anywhere;
+}
+
+.rule-reply {
+  margin: 14px 0;
+  color: #52675e;
+  white-space: pre-wrap;
+}
+
+.secondary-button {
+  padding: 8px 12px;
+  border: 1px solid #cbd8d1;
+  border-radius: 8px;
+  background: white;
+  color: #172b25;
+}
+
+.simulator {
+  grid-column: 1 / -1;
+}
+
+.simulation-result {
+  margin-top: 20px;
+  padding: 18px;
+  border-left: 4px solid #16845e;
+  border-radius: 8px;
+  background: #eaf8f1;
+}
+
+.simulation-result p {
+  margin: 10px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .automation-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.chat-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  background: white;
+  border: 1px solid #e2e9e5;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.chat-contacts {
+  padding: 20px;
+  border-right: 1px solid #e2e9e5;
+}
+
+.chat-contacts h2 {
+  font-size: 18px;
+}
+
+.chat-contact {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #f5f7f8;
+  color: #172b25;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.chat-contact.selected {
+  border-color: #16845e;
+  background: #eaf8f1;
+}
+
+.chat-contact span,
+.chat-header span {
+  color: #657a72;
+  font-size: 12px;
+}
+
+.chat-main {
+  min-width: 0;
+}
+
+.chat-header {
+  display: grid;
+  gap: 6px;
+  padding: 20px;
+  border-bottom: 1px solid #e2e9e5;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 380px;
+  padding: 24px;
+  overflow-y: auto;
+  background: #f7faf8;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+
+.chat-bubble.incoming {
+  align-self: flex-start;
+  background: white;
+  border: 1px solid #e2e9e5;
+}
+
+.chat-bubble.outgoing {
+  align-self: flex-end;
+  background: #d7f5e6;
+}
+
+.chat-bubble small {
+  color: #52675e;
+  font-weight: 600;
+}
+
+.chat-bubble p {
+  margin: 8px 0;
+  white-space: pre-wrap;
+}
+
+.chat-bubble time {
+  display: block;
+  color: #52675e;
+  font-size: 11px;
+  text-align: right;
+}
+
+.chat-placeholder {
+  padding: 30px;
+  color: #657a72;
+  line-height: 1.6;
+}
+
+.chat-composer {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #e2e9e5;
+}
+
+.chat-composer label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chat-composer select,
+.chat-composer textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd8d1;
+  border-radius: 10px;
+  background: white;
+  color: #172b25;
+  font: inherit;
+}
+
+.chat-composer textarea {
+  resize: vertical;
+}
+
+.chat-composer select:focus,
+.chat-composer textarea:focus {
+  outline: 2px solid #16845e;
+  outline-offset: 2px;
+}
+
+.chat-composer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .chat-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-contacts {
+    max-height: 220px;
+    overflow-y: auto;
+    border-right: 0;
+    border-bottom: 1px solid #e2e9e5;
+  }
+}
